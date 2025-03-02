@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "My Second Post"
+title:  "Where shots go relative to keepers"
 date:   2025-03-02 12:01:00 +0000
 ---
+
+I will make use of statsbomb data to see which shots get saved by the keeper
+dependin on the shot placement relative to the keeper.
 
 
 ```python
@@ -299,6 +302,10 @@ def graph_gk(ax, the_gk_faces, the_gk_name, legend=False):
         );
 ```
 
+## Keeper maps
+
+Here are maps of shots and goals against some keepers from the perspective of the keeper looking at the striker.
+The body part the save was made with is shown by colour.
 
 ```python
 our_keepers = [PICKFORD_ID, SIMON_ID, SOMMER_ID]
@@ -320,9 +327,11 @@ fig.legend(loc="outside right");
 
 
     
-![png](stats_analysis_files/stats_analysis_17_0.png)
+![maps of saves by some keepers](/assets/images/keeper_save_maps.png)
     
 
+
+## Scoring rates in quadrants
 
 
 ```python
@@ -384,7 +393,7 @@ quad_totals.sum(axis=0)
 ```
 
 
-
+The shots keepers face are about even between right and left.
 
     quadrant
     high left     109.0
